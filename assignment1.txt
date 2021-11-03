@@ -1,0 +1,236 @@
+pragya@DESKTOP-FTTJ30R MINGW64 ~
+$ ped
+bash: ped: command not found
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~
+$ pwd
+/c/Users/pragya
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~
+$ mkdir assignment3
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~
+$ cd assignment
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ mkdir source
+mkdir: cannot create directory ‘source’: File exists
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ mkdir source
+mkdir: cannot create directory ‘source’: File exists
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ mkdir source
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ mkdir destination
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ ls
+destination/  source/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd source
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/source
+$ ls
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/source
+$ cat > dummy.txt
+I am dummy text file
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/source
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ ls
+destination/  source/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd -r source/dummy.text destination/
+bash: cd: -r: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cp -r source/dummy.text destination/
+cp: cannot stat 'source/dummy.text': No such file or directory
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd source
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/source
+$ cat dummy.txt
+I am dummy text file
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/source
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ ls
+destination/  source/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ ls
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ pwd
+/c/Users/pragya/assignment
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cp -r source/dummy.txt destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ ls
+dummy.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ cat dummy.txt
+I am dummy text file
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd source/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/source
+$ ls
+dummy.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/source
+$ cat dummy.txt
+I am dummy text file
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/source
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ ls
+dummy.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ rm dummy.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ ls
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cp -r source/destination
+cp: missing destination file operand after 'source/destination'
+Try 'cp --help' for more information.
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cp -r source/.destination
+cp: missing destination file operand after 'source/.destination'
+Try 'cp --help' for more information.
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cp -r source destination
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ ls
+source/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ rm -r source
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ ls
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cp -r source/.destination/
+cp: missing destination file operand after 'source/.destination/'
+Try 'cp --help' for more information.
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cp -r source/destination/
+cp: missing destination file operand after 'source/destination/'
+Try 'cp --help' for more information.
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cp -r source/. destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ ls
+dummy.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ rm dummy.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ ls
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ mv source/dummy.txt destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ ls
+dummy.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ cat dummy.txt
+I am dummy text file
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd source/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/source
+$ ls
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/source
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd destination/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ vim dummy.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ cat dummy.txt
+dumy text functionup
+
+dummy text functionupI am dummy text file
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$ grep -i "functionup" dummy.txt
+dumy text functionup
+dummy text functionupI am dummy text file
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment/destination
+$
