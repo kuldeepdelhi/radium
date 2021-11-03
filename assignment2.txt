@@ -1,0 +1,129 @@
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/assignment
+$ cd ..
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~
+$ mkdir recap
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~
+$ cd recap
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap
+$ mkdir gitsession
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap
+$ cd gitsession
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession
+$ cd gitsession/
+bash: cd: gitsession/: No such file or directory
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession
+$ git clone https://github.com/kuldeepdelhi/radium.git
+Cloning into 'radium'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 12 (delta 1), reused 7 (delta 0), pack-reused 0
+Receiving objects: 100% (12/12), done.
+Resolving deltas: 100% (1/1), done.
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession
+$ pwd
+/c/Users/pragya/recap/gitsession
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession
+$ ls
+radium/
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession
+$ cd radium
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (main)
+$ git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/practice/kuldeepmeena
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (main)
+$ git checkout practice/kuldeepmeena
+Switched to a new branch 'practice/kuldeepmeena'
+Branch 'practice/kuldeepmeena' set up to track remote branch 'practice/kuldeepmeena' from 'origin'.
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (practice/kuldeepmeena)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (main)
+$ git checkout -b recap/session
+Switched to a new branch 'recap/session'
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (recap/session)
+$ cat > submission.txt
+this is my line number 1
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (recap/session)
+$ cat > anotherFile.txt
+I am the second file for the demo
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (recap/session)
+$ git status
+On branch recap/session
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        anotherFile.txt
+        submission.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (recap/session)
+$ git add submission.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (recap/session)
+$ git add anotherFile.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (recap/session)
+$ git status
+On branch recap/session
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   anotherFile.txt
+        new file:   submission.txt
+
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (recap/session)
+$ git commit -m "recap of the session"
+[recap/session 318c945] recap of the session
+ 2 files changed, 2 insertions(+)
+ create mode 100644 anotherFile.txt
+ create mode 100644 submission.txt
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (recap/session)
+$ git push
+fatal: The current branch recap/session has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin recap/session
+
+
+pragya@DESKTOP-FTTJ30R MINGW64 ~/recap/gitsession/radium (recap/session)
+$ git push --set-upstream origin recap/session
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 383 bytes | 63.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'recap/session' on GitHub by visiting:
+remote:      https://github.com/kuldeepdelhi/radium/pull/new/recap/session
+remote:
+To https://github.com/kuldeepdelhi/radium.git
+ * [new branch]      recap/session -> recap/session
+Branch 'recap/session' set up to track remote branch 'recap/session' from 'origin'.
